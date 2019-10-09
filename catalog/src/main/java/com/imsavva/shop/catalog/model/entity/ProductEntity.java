@@ -1,4 +1,4 @@
-package com.imsavva.shop.catalog;
+package com.imsavva.shop.catalog.model.entity;
 
 import lombok.Data;
 
@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Data
 @Entity
 @Table(name = "products")
-public class Product {
+public class ProductEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
