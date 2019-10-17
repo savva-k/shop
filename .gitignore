@@ -32,3 +32,6 @@ build/
 
 ### Others ###
 .DS_Store
+
+### Embedded DB ###
+/db
