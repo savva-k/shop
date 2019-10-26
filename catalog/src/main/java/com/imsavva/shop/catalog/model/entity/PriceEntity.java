@@ -17,6 +17,6 @@ public class PriceEntity {
     @Column(name = "product_id")
     private Long productId;
     private PriceType type;
-    private BigDecimal price;
+    private BigDecimal priceValue;
     private LocalDate date;
 }

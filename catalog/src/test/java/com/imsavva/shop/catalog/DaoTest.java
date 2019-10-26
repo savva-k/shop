@@ -8,7 +8,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.transaction.Transactional;
@@ -27,7 +26,6 @@ public class DaoTest {
 
     @Autowired
     private ProductRepository productRepository;
-
 
     @Test
     public void contextLoads() {
@@ -54,6 +52,6 @@ public class DaoTest {
 
         Product entity = productRepository.createProduct(product);
         assertNotNull(entity.getId());
-        assertEquals(1, entity.getPrices().size());
+        assertEquals(product.getPrices().get(0).getPriceValue(), entity.getPrices().get(0).getPriceValue());
     }
 }

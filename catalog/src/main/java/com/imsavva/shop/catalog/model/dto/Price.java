@@ -11,14 +11,19 @@ public class Price {
     private Long id;
     private Long productId;
     private PriceType type;
-    private BigDecimal value;
+    private BigDecimal priceValue;
     private LocalDate date;
 
     public Price() {
     }
 
     public Price(PriceType type, BigDecimal price) {
+        this(type, price, LocalDate.now());
+    }
+
+    public Price(PriceType type, BigDecimal price, LocalDate date) {
         this.type = type;
-        this.value = price;
+        this.priceValue = price;
+        this.date = date;
     }
 }
